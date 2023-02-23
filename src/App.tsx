@@ -1,32 +1,43 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import Tweet from '@njrardin/react-fake-tweet'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  const config = {
+    user: {
+      nickname: "twitter",
+      avatar: "../public/vite.svg",
+      name: "Twitter",
+      verified: true,
+      locked: false
+    },
+    display: "default",
+    text: "This is a fake tweet.",
+    image: "",
+    date: "3:32 PM · Feb 14, 1997",
+    app: "Twitter for iPhone",
+    retweets: 32000,
+    quotedTweets: 100,
+    likes: 12700
+  };
+  
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header className="App-header">
+        <h1>Fake Tweet Builder</h1>
+      </header>
+      <main>
+        <div className="Sidebar">
+          <form>
+            test
+          </form>
+        </div>
+        <div>
+          <Tweet config={config}/>
+        </div>
+      </main>
     </div>
   )
 }
