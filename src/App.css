@@ -1,13 +1,3 @@
-#root{
-  height: 100vh;
-  width: 100vw;
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-}
-
 /* App container */
 .App {
   display: flex;
@@ -22,27 +12,36 @@ main {
   font-size: 24px;
   text-align: center;
   height: 10vh;
+  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 10px;
+}
+.header-title {
+  font-weight: 700;
+  font-size: 1.5em;
 }
 
-/* Main container */
+/* Main container for tweet and controls */
 main {
   flex: 1;
   display: flex;
-  flex-direction: row;
   height: 90vh;
+  flex-direction: column;
   overflow: hidden;
 }
 
-/* Sidebar */
-.Sidebar {
-  background-color: #f0f0f0;
-  position: relative;
-  width: 100%;
-  max-width: 25%;
-  height: 100%;
+@media (min-width: 800px) {
+  /* Main container for tweet and controls for web browser shaped screens */
+  main {
+    flex-direction: row;
+  }
+}
+
+/* config-controls */
+.config-controls {
+  background-color: #e25959;
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 1;
@@ -50,8 +49,8 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  /* Sidebar for web browser shaped screens */
-  .Sidebar {
+  /* config-controls for web browser shaped screens */
+  .config-controls {
     display: block;
     position: relative;
     width: 25%;
@@ -61,8 +60,8 @@ main {
 }
 
 @media screen and (orientation: portrait) {
-  /* Sidebar for mobile or vertical screens */
-  .Sidebar {
+  /* config-controls for mobile or vertical screens */
+  .config-controls {
     display: block;
     position: absolute;
     bottom: 0;

@@ -26,16 +26,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Fake Tweet Builder</h1>
+        <h1 className="header-title">Fake Tweet Builder</h1>
       </header>
       <main>
-        <div className="Sidebar">
+        <div>
+          <Tweet config={config}/>
+        </div>
+        <div className="config-controls">
           <form>
             test
           </form>
-        </div>
-        <div>
-          <Tweet config={config}/>
         </div>
       </main>
     </div>
