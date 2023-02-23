@@ -1,4 +1,5 @@
 import * as React from "react";
+import './TweetConfigForm.css'
 import TweetConfig from "@njrardin/react-fake-tweet/dist/types/TweetConfig";
 
 export interface TweetConfigFormProps {

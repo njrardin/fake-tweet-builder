@@ -7,7 +7,7 @@ import TweetConfig from "@njrardin/react-fake-tweet/dist/types/TweetConfig";
 const defaultConfig: TweetConfig = {
   user: {
     nickname: "twitter",
-    avatar: "../public/vite.svg",
+    avatar: "../public/twitter-logo.svg",
     name: "Twitter",
     verified: true,
     locked: false,
