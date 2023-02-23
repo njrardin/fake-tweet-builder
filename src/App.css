@@ -23,59 +23,35 @@
   font-size: 1.5em;
 }
 
-/* Main container for tweet and controls */
+/* Default for mobile screens */
 main {
   flex: 1;
   display: flex;
   height: 90vh;
   flex-direction: column;
   overflow: hidden;
+  background-color: #eeeeee;
+}
+.tweet-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.config-controls {
+  flex:1;
+  background-color: #eeeeee;
+  overflow-y: auto;
 }
 
+/** 
+ * Controls for browser / mobile landscape screens 
+ * 
+ */
 @media (min-width: 800px) {
-  /* Main container for tweet and controls for web browser shaped screens */
   main {
     flex-direction: row;
   }
-}
-
-/* config-controls */
-.config-controls {
-  background-color: #e25959;
-  overflow-y: auto;
-  overflow-x: hidden;
-  z-index: 1;
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  /* config-controls for web browser shaped screens */
-  .config-controls {
-    display: block;
-    position: relative;
-    width: 25%;
-    height: 100%;
-    max-height: 100%;
-  }
-}
-
-@media screen and (orientation: portrait) {
-  /* config-controls for mobile or vertical screens */
-  .config-controls {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    max-height: 33%;
-  }
-}
-
-/* Tweet */
-.Tweet {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
 }
