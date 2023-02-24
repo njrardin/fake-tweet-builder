@@ -4,6 +4,14 @@ import Tweet from "@njrardin/react-fake-tweet";
 import TweetConfigForm from "./components/TweetConfigForm";
 import TweetConfig from "@njrardin/react-fake-tweet/dist/types/TweetConfig";
 
+function formatDate() {
+  const date = new Date();
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+  return `${month}/${day}/${year}`;
+}
+
 const defaultConfig: TweetConfig = {
   user: {
     nickname: "twitter",
@@ -15,7 +23,7 @@ const defaultConfig: TweetConfig = {
   display: "default",
   text: "This is a fake tweet.",
   image: "",
-  date: "3:32 PM · Feb 14, 1997",
+  date: formatDate(),
   app: "Twitter for iPhone",
   retweets: 32000,
   quotedTweets: 100,
